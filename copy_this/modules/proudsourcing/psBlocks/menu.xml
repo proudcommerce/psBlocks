@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<OX>
+    <OXMENU id="NAVIGATION_PSMODULE">
+        <MAINMENU id="psBlocks">
+            <SUBMENU id="psblocks_oxtplblocks_list" cl="psblocks_oxtplblocks_main" list="psblocks_oxtplblocks_list">
+                <TAB id="psblocks_oxtplblocks_editor" cl="psblocks_oxtplblocks_editor" />
+            </SUBMENU>
+        </MAINMENU>
+    </OXMENU>
+</OX>
