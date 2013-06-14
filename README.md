@@ -6,7 +6,7 @@ Free Module for OXID eShop.
 
 Features
 
-	- add/remove/edit Oxid template blocks
+	- add/remove/edit oxid template blocks (oxblocks table)
 
 
 Installation
