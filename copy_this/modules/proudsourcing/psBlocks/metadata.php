@@ -1,5 +1,17 @@
 <?php
 /**
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * @copyright (c) Proud Sourcing GmbH | 2014
+ * @link www.proudcommerce.com
+ * @package psBlocks
+ * @version 1.1.0
+**/
+
+/**
  * Metadata version
  */
 $sMetadataVersion = '1.1';
@@ -15,7 +27,7 @@ $aModule = array(
         'en' => 'Tool for managing Oxid template blocks'
     ),
     'thumbnail'    => '',
-    'version'      => '1.0.0',
+    'version'      => '1.1.0',
     'author'       => 'Proud Sourcing GmbH',
     'url'          => 'http://www.proudcommerce.com/',
     'email'        => 'support@proudcommerce.com',

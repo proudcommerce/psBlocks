@@ -15,6 +15,12 @@ Installation
 	2. activate module psBlocks in shop admin
 
 
+Changelog
+
+	2014-12-22	Support for OXID 4.9
+	2013-06-14	Module release (OXID 4.7/4.8)
+	
+
 License
 
     This program is free software: you can redistribute it and/or modify
@@ -33,5 +39,5 @@ License
 
 Copyright
 
-	Proud Sourcing GmbH 2013
+	Proud Sourcing GmbH 2014
 	www.proudcommerce.com

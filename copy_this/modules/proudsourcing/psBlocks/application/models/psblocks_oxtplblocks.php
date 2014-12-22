@@ -5,10 +5,10 @@
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * @copyright (c) Proud Sourcing GmbH | 2013
+ * @copyright (c) Proud Sourcing GmbH | 2014
  * @link www.proudcommerce.com
- * @package psCmsSnippets
- * @version 1.0.0
+ * @package psBlocks
+ * @version 1.1.0
 **/
 class psblocks_oxtplblocks extends oxBase
 {
