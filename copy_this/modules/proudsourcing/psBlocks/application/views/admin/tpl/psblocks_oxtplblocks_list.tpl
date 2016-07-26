@@ -48,15 +48,16 @@
                 <col width="10%">
             </colgroup>
             <tr class="listitem">
-                <td valign="top" class="listfilter first" height="20"  colspan="4">
-                    <div class="r1">
-                        <div class="b1">
-                            <div class="find">
-                                <input class="listedit" type="submit" name="submitit" value="[{ oxmultilang ident="GENERAL_SEARCH" }]">
-                            </div>
-
-                            <input class="listedit" type="text" size="50" maxlength="128" name="where[oxtplblocks][oxblockname]" value="[{ $where.oxtplblocks.oxblockname }]" style="margin-left: 65px;">
-                        </div>
+            	<td valign="top" class="listfilter first" height="35">&nbsp;</td>
+                <td valign="top" class="listfilter">
+					<input class="listedit" type="text" size="50" maxlength="128" name="where[oxtplblocks][oxblockname]" value="[{ $where.oxtplblocks.oxblockname }]">
+                </td>
+                <td valign="top" class="listfilter">
+                	<input class="listedit" type="text" size="50" maxlength="128" name="where[oxtplblocks][oxmodule]" value="[{ $where.oxtplblocks.oxmodule }]">
+                </td>
+                <td valign="top" class="listfilter">
+                	<div class="find">
+                    	<input class="listedit" type="submit" name="submitit" value="[{ oxmultilang ident="GENERAL_SEARCH" }]">
                     </div>
                 </td>
             </tr>

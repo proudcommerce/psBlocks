@@ -55,39 +55,39 @@
             <td class="edittext">[{ oxmultilang ident="PSBLOCKS_OXMODULE" }]</td>
             <td class="edittext"><input type="text" class="editinput" size="50" name="editval[oxtplblocks__oxmodule]" value="[{ $edit->oxtplblocks__oxmodule->value }]" /></td>
         </tr>
-
         <tr>
             <td class="edittext">
             </td>
             <td class="edittext"><br>
-                <input type="submit" class="edittext" name="save" id="saveFormButton" value="[{ oxmultilang ident="GENERAL_SAVE" }]" [{ $readonly }]><br><br>
+                <input type="submit" class="edittext" name="save" id="saveFormButton" value="[{ oxmultilang ident="GENERAL_SAVE" }]" [{ $readonly }]>
+                </form>
+				<br><br><br>
+				[{ if $edit}]
+					<form name="myedit" id="myedit" action="[{ $oViewConf->getSelfLink() }]" method="post">
+						[{ $oViewConf->getHiddenSid() }]
+						<input type="hidden" name="cl" value="psblocks_oxtplblocks_editor">
+						<input type="hidden" name="fnc" value="save">
+						<input type="hidden" name="oxid" value="[{ $oxid }]">
+						<input type="hidden" name="editval[oxtplblocks__oxid]" value="[{ $oxid }]">
+						<input type="hidden" name="sorting" value="">
+						<input type="hidden" name="stable" value="">
+						<input type="hidden" name="starget" value="">
+
+						[{ if $edit->oxtplblocks__oxactive->value eq 0 }]
+						<input type="hidden" name="editval[oxtplblocks__oxactive]" value="1" />
+						<input type="submit" value="[{ oxmultilang ident="PSBLOCKS_ACTIVATE" }]" />
+						[{/if}]
+
+						[{ if $edit->oxtplblocks__oxactive->value eq 1 }]
+						<input type="hidden" name="editval[oxtplblocks__oxactive]" value="0" />
+						<input type="submit" value="[{ oxmultilang ident="PSBLOCKS_DEACTIVATE" }]" />
+						[{/if}]
+					</form>
+				[{ /if }]
             </td>
         </tr>
     </table>
-</form>
 
-[{ if $edit}]
-    <form name="myedit" id="myedit" action="[{ $oViewConf->getSelfLink() }]" method="post">
-        [{ $oViewConf->getHiddenSid() }]
-        <input type="hidden" name="cl" value="psblocks_oxtplblocks_editor">
-        <input type="hidden" name="fnc" value="save">
-        <input type="hidden" name="oxid" value="[{ $oxid }]">
-        <input type="hidden" name="editval[oxtplblocks__oxid]" value="[{ $oxid }]">
-        <input type="hidden" name="sorting" value="">
-        <input type="hidden" name="stable" value="">
-        <input type="hidden" name="starget" value="">
-
-        [{ if $edit->oxtplblocks__oxactive->value eq 0 }]
-        <input type="hidden" name="editval[oxtplblocks__oxactive]" value="1" />
-        <input type="submit" value="[{ oxmultilang ident="PSBLOCKS_ACTIVATE" }]" />
-        [{/if}]
-
-        [{ if $edit->oxtplblocks__oxactive->value eq 1 }]
-        <input type="hidden" name="editval[oxtplblocks__oxactive]" value="0" />
-        <input type="submit" value="[{ oxmultilang ident="PSBLOCKS_DEACTIVATE" }]" />
-        [{/if}]
-    </form>
-[{ /if }]
 
 </div>
 

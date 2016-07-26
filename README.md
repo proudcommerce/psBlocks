@@ -17,8 +17,9 @@ Installation
 
 Changelog
 
-	2014-12-22	Support for OXID 4.9
-	2013-06-14	Module release (OXID 4.7/4.8)
+	2016-07-26	1.2.0	Ready for OXID 4.10/5.2, Add search for module name
+	2014-12-22	1.1.0	Support for OXID 4.9
+	2013-06-14	1.0.0	Module release (OXID 4.7/4.8)
 	
 
 License
@@ -39,5 +40,5 @@ License
 
 Copyright
 
-	Proud Sourcing GmbH 2014
-	www.proudcommerce.com
+	Proud Sourcing GmbH 2016
+	www.proudcommerce.com / www.proudsourcing.de
