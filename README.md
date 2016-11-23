@@ -2,7 +2,7 @@ psBlocks
 =========
 
 Tool for managing oxid template blocks.
-Free Module for OXID eShop.
+Free module for OXID eshop 4.7, 4.8, 4.9 and 4.10.
 
 Features
 

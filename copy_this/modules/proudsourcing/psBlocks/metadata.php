@@ -26,7 +26,7 @@ $aModule = array(
         'de' => 'Verwalten von Oxid Template Blocks.',
         'en' => 'Tool for managing Oxid template blocks'
     ),
-    'thumbnail'    => 'logo.jpg',
+    'thumbnail'    => 'logo_pc-os.jpg',
     'version'      => '1.2.0',
     'author'       => 'Proud Sourcing GmbH',
     'url'          => 'http://www.proudcommerce.com/',
