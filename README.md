@@ -8,12 +8,12 @@ Features
 
 	- add/remove/edit oxid template blocks (oxblocks table)
 
-
 Installation
 
 	1. copy content from copy_this folder into your shop root
 	2. activate module psBlocks in shop admin
 
+Tip: Use the [OXID module connector](https://github.com/OXIDprojects/OXID-Module-Connector) to install this module.
 
 Changelog
 
@@ -21,7 +21,6 @@ Changelog
 	2014-12-22	1.1.0	Support for OXID 4.9
 	2013-06-14	1.0.0	Module release (OXID 4.7/4.8)
 	
-
 License
 
     This program is free software: you can redistribute it and/or modify
