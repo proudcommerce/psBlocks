@@ -12,12 +12,17 @@
   "license": [
     "GNU"
   ],
+  "autoload": {
+    "psr-4": {
+      "ProudSourcing\\psBlocks\\": "../../../source/modules/ps/psblocks"
+    }
+  },
   "extra": {
     "oxideshop": {
       "blacklist-filter": [
         "documentation/*.*"
       ],
-      "target-directory": "ps/psBlocks"
+      "target-directory": "ps/psblocks"
     }
   }
 }

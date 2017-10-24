@@ -21,7 +21,7 @@ $sMetadataVersion = '2.0';
  */
 $aModule = array(
     'id' => 'psBlocks',
-    'title' => 'psBlocks',
+    'title' => 'psblocks',
     'description' => array(
         'de' => 'Verwalten von Oxid Template Blocks.',
         'en' => 'Tool for managing Oxid template blocks'
@@ -31,16 +31,11 @@ $aModule = array(
     'author' => 'Proud Sourcing GmbH',
     'url' => 'https://www.proudcommerce.com/',
     'email' => 'support@proudcommerce.com',
-    'extend' => array(
-
+    'extend' => array(),
+    'controllers' => array(
+        'psblocks_tplblocksmain' => \ProudSourcing\psBlocks\Controller\Admin\TplBlocksMain::class,
     ),
-    'templates' => array(
-
-    ),
-    'blocks' => array(
-
-    ),
-    'settings' => array(
-
-    ),
+    'templates' => array(),
+    'blocks' => array(),
+    'settings' => array(),
 );
