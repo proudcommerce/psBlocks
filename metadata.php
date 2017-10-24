@@ -20,8 +20,8 @@ $sMetadataVersion = '2.0';
  * Module information
  */
 $aModule = array(
-    'id' => 'psBlocks',
-    'title' => 'psblocks',
+    'id' => 'psblocks',
+    'title' => 'psBlocks',
     'description' => array(
         'de' => 'Verwalten von Oxid Template Blocks.',
         'en' => 'Tool for managing Oxid template blocks'
@@ -35,7 +35,9 @@ $aModule = array(
     'controllers' => array(
         'psblocks_tplblocksmain' => \ProudSourcing\psBlocks\Controller\Admin\TplBlocksMain::class,
     ),
-    'templates' => array(),
+    'templates' => array(
+        'psblocks_tplblocksmain.tpl' => 'ps/psblocks/Application/views/admin/tpl/psblocks_tplblocksmain.tpl',
+    ),
     'blocks' => array(),
     'settings' => array(),
 );

@@ -20,5 +20,5 @@ class TplBlocksMain extends \OxidEsales\Eshop\Application\Controller\Admin\Admin
      * Current class template name.
      * @var string
      */
-    protected $_sThisTemplate = 'psblocks_oxtplblocks.tpl';
+    protected $_sThisTemplate = 'psblocks_tplblocksmain.tpl';
 }
