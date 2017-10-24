@@ -1,0 +1,23 @@
+{
+  "name": "proudcommerce/psblocks",
+  "description": "psBlocks - Module for managing oxid template blocks in shop admin.",
+  "type": "oxideshop-module",
+  "keywords": [
+    "oxid",
+    "modules",
+    "blocks",
+    "admin"
+  ],
+  "homepage": "https://github.com/proudcommerce/psBlocks",
+  "license": [
+    "GNU"
+  ],
+  "extra": {
+    "oxideshop": {
+      "blacklist-filter": [
+        "documentation/*.*"
+      ],
+      "target-directory": "ps/psBlocks"
+    }
+  }
+}
