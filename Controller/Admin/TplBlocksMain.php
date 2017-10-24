@@ -12,7 +12,7 @@
  * @version 2.0.0
  **/
 
-namespace ProudSourcing\psBlocks\Controller;
+namespace ProudSourcing\psBlocks\Controller\Admin;
 
 class TplBlocksMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminController
 {
