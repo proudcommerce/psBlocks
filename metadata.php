@@ -33,12 +33,13 @@ $aModule = array(
     'email' => 'support@proudcommerce.com',
     'extend' => array(),
     'controllers' => array(
-        'psblocks_tplblocks' => \ProudSourcing\psBlocks\Controller\Admin\TplBlocks::class,
+        'psblocks_tplblocks' => \ProudSourcing\psBlocks\Model\TplBlocks::class,
+        'psblocks_tplblocksframe' => \ProudSourcing\psBlocks\Controller\Admin\TplBlocksFrame::class,
         'psblocks_tplblocksmain' => \ProudSourcing\psBlocks\Controller\Admin\TplBlocksMain::class,
         'psblocks_tplblockslist' => \ProudSourcing\psBlocks\Controller\Admin\TplBlocksList::class,
     ),
     'templates' => array(
-        'psblocks_tplblocks.tpl' => 'ps/psblocks/Application/views/admin/tpl/psblocks_tplblocks.tpl',
+        'psblocks_tplblocksframe.tpl' => 'ps/psblocks/Application/views/admin/tpl/psblocks_tplblocksframe.tpl',
         'psblocks_tplblocksmain.tpl' => 'ps/psblocks/Application/views/admin/tpl/psblocks_tplblocksmain.tpl',
         'psblocks_tplblockslist.tpl' => 'ps/psblocks/Application/views/admin/tpl/psblocks_tplblockslist.tpl',
     ),

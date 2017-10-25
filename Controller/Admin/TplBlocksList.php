@@ -14,7 +14,7 @@
 
 namespace ProudSourcing\psBlocks\Controller\Admin;
 
-class TplBlocksList extends \OxidEsales\Eshop\Application\Controller\Admin\AdminController
+class TplBlocksList extends \OxidEsales\Eshop\Application\Controller\Admin\AdminListController
 {
     /**
      * Current class template name.
@@ -45,7 +45,7 @@ class TplBlocksList extends \OxidEsales\Eshop\Application\Controller\Admin\Admin
     public function render()
     {
         parent::render();
-        $this->_aViewData["where"] = oxRegistry::getConfig()->getRequestParameter("where");
+        $this->_aViewData["where"] = \OxidEsales\Eshop\Core\Registry::getConfig()->getRequestParameter("where");
         return $this->_sThisTemplate;
     }
 

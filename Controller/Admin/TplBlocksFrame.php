@@ -14,11 +14,11 @@
 
 namespace ProudSourcing\psBlocks\Controller\Admin;
 
-class TplBlocks extends \OxidEsales\Eshop\Application\Controller\Admin\AdminController
+class TplBlocksFrame extends \OxidEsales\Eshop\Application\Controller\Admin\AdminController
 {
     /**
      * Current class template name.
      * @var string
      */
-    protected $_sThisTemplate = 'psblocks_tplblocksmain.tpl';
+    protected $_sThisTemplate = 'psblocks_tplblocksframe.tpl';
 }

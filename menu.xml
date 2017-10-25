@@ -2,8 +2,8 @@
 <OX>
     <OXMENU id="NAVIGATION_PSMODULE">
         <MAINMENU id="psBlocks">
-            <SUBMENU id="psblocks_tplblockslist" cl="psblocks_tplblocksmain" list="psblocks_tplblockslist">
-                <TAB id="psblocks_tplblockseditor" cl="psblocks_tplblockseditor" />
+            <SUBMENU id="psblocks_tplblockslist" cl="psblocks_tplblocks" list="psblocks_tplblockslist">
+                <TAB id="psblocks_tplblocksmain" cl="psblocks_tplblocksmain" />
             </SUBMENU>
         </MAINMENU>
     </OXMENU>

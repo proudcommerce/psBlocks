@@ -24,24 +24,23 @@ class TplBlocksMain extends \OxidEsales\Eshop\Application\Controller\Admin\Admin
      */
     public function render()
     {
-        $soxId = oxRegistry::getConfig()->getRequestParameter("oxid");
+        $soxId = \OxidEsales\Eshop\Core\Registry::getConfig()->getRequestParameter("oxid");
         // check if we right now saved a new entry
-        $sSavedID = oxRegistry::getConfig()->getRequestParameter("saved_oxid");
+        $sSavedID = \OxidEsales\Eshop\Core\Registry::getConfig()->getRequestParameter("saved_oxid");
         if (($soxId == "-1" || !isset($soxId)) && isset($sSavedID)) {
             $soxId = $sSavedID;
-            oxRegistry::getSession()->deleteVariable("saved_oxid");
-            #$this->_aViewData["oxid"] =  $soxId;
+            \OxidEsales\Eshop\Core\Registry::getSession()->deleteVariable("saved_oxid");
             // for reloading upper frame
             $this->_aViewData["updatelist"] = "1";
         }
 
         if ($soxId != "-1" && isset($soxId)) {
             // load object
-            $oConfi = oxNew("psblocks_tplblocks");
-            $oConfi->load($soxId);
+            $oBlocks = oxNew(\ProudSourcing\psBlocks\Model\TplBlocks::class);
+            $oBlocks->load($soxId);
 
             $this->_aViewData["oxid"] = $soxId;
-            $this->_aViewData["edit"] = $oConfi;
+            $this->_aViewData["edit"] = $oBlocks;
         }
 
         return "psblocks_tplblocksmain.tpl";
@@ -54,22 +53,21 @@ class TplBlocksMain extends \OxidEsales\Eshop\Application\Controller\Admin\Admin
      */
     public function save()
     {
-        $soxId = oxRegistry::getConfig()->getRequestParameter("oxid");
-        $aParams = oxRegistry::getConfig()->getRequestParameter("editval");
+        $soxId = \OxidEsales\Eshop\Core\Registry::getConfig()->getRequestParameter("oxid");
+        $aParams = \OxidEsales\Eshop\Core\Registry::getConfig()->getRequestParameter("editval");
 
-        $oConfi = oxNew("psblocks_tplblocks");
+        $oBlocks = oxNew(\ProudSourcing\psBlocks\Model\TplBlocks::class);
         if ($soxId != "-1") {
-            $oConfi->load($soxId);
-            $oConfi->assign($aParams);
+            $oBlocks->load($soxId);
+            $oBlocks->assign($aParams);
         } else {
             $aParams['oxtplblocks__oxid'] = null;
         }
-
-        $oConfi->save();
+        $oBlocks->save();
 
         // set oxid if inserted
         if ($soxId == "-1") {
-            oxRegistry::getSession()->setVariable("saved_oxid", $oConfi->getId());
+            \OxidEsales\Eshop\Core\Registry::getSession()->setVariable("saved_oxid", $oBlocks->getId());
         }
 
         $this->_aViewData["updatelist"] = "1";
