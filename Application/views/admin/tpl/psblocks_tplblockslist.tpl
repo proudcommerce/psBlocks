@@ -23,7 +23,7 @@
     <form name="search" id="search" action="[{ $oViewConf->getSelfLink() }]" method="post">
 
         [{$oViewConf->getHiddenSid()}]
-        <input type="hidden" name="cl" value="psblocks_oxtplblocks_list">
+        <input type="hidden" name="cl" value="psblocks_tplblockslist">
         <input type="hidden" name="lstrt" value="[{$lstrt}]">
         <input type="hidden" name="actedit" value="[{$actedit}]">
         <input type="hidden" name="oxid" value="[{$oxid}]">

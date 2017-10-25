@@ -17,7 +17,7 @@
 
 <form name="myedit" id="myedit" action="[{ $oViewConf->getSelfLink() }]" method="post">
     [{ $oViewConf->getHiddenSid() }]
-    <input type="hidden" name="cl" value="psblocks_oxtplblocks_editor">
+    <input type="hidden" name="cl" value="psblocks_tplblocksmain">
     <input type="hidden" name="fnc" value="save">
     <input type="hidden" name="oxid" value="[{ $oxid }]">
     <input type="hidden" name="editval[oxtplblocks__oxid]" value="[{ $oxid }]">
@@ -66,7 +66,7 @@
 [{ if $edit}]
     <form name="myedit" id="myedit" action="[{ $oViewConf->getSelfLink() }]" method="post">
         [{ $oViewConf->getHiddenSid() }]
-        <input type="hidden" name="cl" value="psblocks_oxtplblocks_editor">
+        <input type="hidden" name="cl" value="psblocks_tplblocksmain">
         <input type="hidden" name="fnc" value="save">
         <input type="hidden" name="oxid" value="[{ $oxid }]">
         <input type="hidden" name="editval[oxtplblocks__oxid]" value="[{ $oxid }]">
