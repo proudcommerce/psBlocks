@@ -17,8 +17,61 @@ namespace ProudSourcing\psBlocks\Controller\Admin;
 class TplBlocksMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminController
 {
     /**
-     * Current class template name.
-     * @var string
+     * Loads blocks info, passes it to Smarty engine and
+     * returns name of template file "psblocks_tplblocksmain.tpl".
+     *
+     * @return string
      */
-    protected $_sThisTemplate = 'psblocks_tplblocksmain.tpl';
+    public function render()
+    {
+        $soxId = oxRegistry::getConfig()->getRequestParameter("oxid");
+        // check if we right now saved a new entry
+        $sSavedID = oxRegistry::getConfig()->getRequestParameter("saved_oxid");
+        if (($soxId == "-1" || !isset($soxId)) && isset($sSavedID)) {
+            $soxId = $sSavedID;
+            oxRegistry::getSession()->deleteVariable("saved_oxid");
+            #$this->_aViewData["oxid"] =  $soxId;
+            // for reloading upper frame
+            $this->_aViewData["updatelist"] = "1";
+        }
+
+        if ($soxId != "-1" && isset($soxId)) {
+            // load object
+            $oConfi = oxNew("psblocks_tplblocks");
+            $oConfi->load($soxId);
+
+            $this->_aViewData["oxid"] = $soxId;
+            $this->_aViewData["edit"] = $oConfi;
+        }
+
+        return "psblocks_tplblocksmain.tpl";
+    }
+
+    /**
+     * Saves blocks
+     *
+     * @return mixed
+     */
+    public function save()
+    {
+        $soxId = oxRegistry::getConfig()->getRequestParameter("oxid");
+        $aParams = oxRegistry::getConfig()->getRequestParameter("editval");
+
+        $oConfi = oxNew("psblocks_tplblocks");
+        if ($soxId != "-1") {
+            $oConfi->load($soxId);
+            $oConfi->assign($aParams);
+        } else {
+            $aParams['oxtplblocks__oxid'] = null;
+        }
+
+        $oConfi->save();
+
+        // set oxid if inserted
+        if ($soxId == "-1") {
+            oxRegistry::getSession()->setVariable("saved_oxid", $oConfi->getId());
+        }
+
+        $this->_aViewData["updatelist"] = "1";
+    }
 }
