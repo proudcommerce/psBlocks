@@ -14,7 +14,7 @@
 
 namespace ProudSourcing\psBlocks\Model;
 
-class TplBlocks extends \OxidEsales\Eshop\Core\Model\BaseModel
+class TplBlocksWrapper extends \OxidEsales\Eshop\Core\Model\BaseModel
 {
     protected $_sClassName = 'oxtplblocks';
 

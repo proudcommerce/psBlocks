@@ -27,7 +27,7 @@ class TplBlocksList extends \OxidEsales\Eshop\Application\Controller\Admin\Admin
      *
      * @var string
      */
-    protected $_sListClass = "psblocks_tplblocks";
+    protected $_sListClass = "psblocks_tplblockswrapper";
 
     /**
      * Default SQL sorting parameter (default null).
