@@ -12,7 +12,7 @@
  * @version 2.0.0
  **/
 
-namespace ProudSourcing\psBlocks\Controller\Admin;
+namespace ProudSourcing\Blocks\Controller\Admin;
 
 class TplBlocksMain extends \OxidEsales\Eshop\Application\Controller\Admin\AdminController
 {
@@ -36,7 +36,7 @@ class TplBlocksMain extends \OxidEsales\Eshop\Application\Controller\Admin\Admin
 
         if ($soxId != "-1" && isset($soxId)) {
             // load object
-            $oBlocks = oxNew(\ProudSourcing\psBlocks\Model\TplBlocksWrapper::class);
+            $oBlocks = oxNew(\ProudSourcing\Blocks\Model\TplBlocksWrapper::class);
             $oBlocks->load($soxId);
 
             $this->_aViewData["oxid"] = $soxId;
@@ -56,7 +56,7 @@ class TplBlocksMain extends \OxidEsales\Eshop\Application\Controller\Admin\Admin
         $soxId = \OxidEsales\Eshop\Core\Registry::getConfig()->getRequestParameter("oxid");
         $aParams = \OxidEsales\Eshop\Core\Registry::getConfig()->getRequestParameter("editval");
 
-        $oBlocks = oxNew(\ProudSourcing\psBlocks\Model\TplBlocksWrapper::class);
+        $oBlocks = oxNew(\ProudSourcing\Blocks\Model\TplBlocksWrapper::class);
         if ($soxId != "-1") {
             $oBlocks->load($soxId);
             $oBlocks->assign($aParams);

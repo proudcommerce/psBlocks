@@ -12,7 +12,7 @@
  * @version 2.0.0
  **/
 
-namespace ProudSourcing\psBlocks\Controller\Admin;
+namespace ProudSourcing\Blocks\Controller\Admin;
 
 class TplBlocksList extends \OxidEsales\Eshop\Application\Controller\Admin\AdminListController
 {
@@ -27,7 +27,7 @@ class TplBlocksList extends \OxidEsales\Eshop\Application\Controller\Admin\Admin
      *
      * @var string
      */
-    protected $_sListClass = \ProudSourcing\psBlocks\Model\TplBlocksWrapper::class;
+    protected $_sListClass = \ProudSourcing\Blocks\Model\TplBlocksWrapper::class;
 
     /**
      * Default SQL sorting parameter (default null).

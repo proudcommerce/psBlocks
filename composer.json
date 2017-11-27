@@ -14,7 +14,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "ProudSourcing\\psBlocks\\": "../../../source/modules/ps/psblocks"
+      "ProudSourcing\\Blocks\\": "../../../source/modules/ps/psblocks"
     }
   },
   "extra": {

@@ -12,7 +12,7 @@
  * @version 2.0.0
  **/
 
-namespace ProudSourcing\psBlocks\Model;
+namespace ProudSourcing\Blocks\Model;
 
 class TplBlocksWrapper extends \OxidEsales\Eshop\Core\Model\BaseModel
 {
