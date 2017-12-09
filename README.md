@@ -11,7 +11,7 @@ Features
 Installation
 
 ```
-composer require proudcommerce/psblocks:dev-oxid6
+composer require proudcommerce/psblocks
 ```
 
 Changelog
